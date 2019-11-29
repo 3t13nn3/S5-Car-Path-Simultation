@@ -266,6 +266,7 @@ int main(int argc, char ** argv){
 
             /*CALCULATING CURRENT POSITION OF OUR CURRENT CAR IN FUNCTION OF TIME AND DEPARTUR/ARRIVAL NODES*/
             int tmp(std::chrono::duration_cast<std::chrono::milliseconds> (std::chrono::steady_clock::now() - starts[i]).count());            float ratio = (float)tmp/to_wait[i];
+            float ratio = (float)tmp/to_wait[i];
             point a = points[car_nodes[i]] * (1 - ratio);
             point b = points[next_nodes[i]] * (ratio);
             point final = a + b;
